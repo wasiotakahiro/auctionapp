@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>アカウント登録画面</title>
+</head>
+<body>
+<h1>アカウント登録画面</h1>
+<div>
+    <form name="signUpForm" method="post" action="/auctionapp/sign_up" th:object="${signUpRequest}">
+        <label>名前：</label>
+        <input type="text" th:field="*{name}"><br>
+        <label>誕生日：</label>
+        <input type="text" th:field="*{birthday}"><br>
+        <label>メールアドレス：</label>
+        <input type="text" th:field="*{eMail}"><br>
+        <label>電話番号：</label>
+        <input type="text" th:field="*{phoneNumber}"><br>
+        <label>住所：</label>
+        <input type="text" th:field="*{address}"><br>
+        <label>ユーザ名：</label>
+        <input type="text" th:field="*{userName}"><br>
+        <label>ユーザID：</label>
+        <input type="text" th:field="*{userId}"><br>
+        <label>パスワード：</label>
+        <input type="password" th:field="*{password}"><br>
+        <label>パスワード(確認用)：</label>
+        <input type="password" th:field="*{confirmPassword}"><br>
+        <button type="submit">登録！！</button>
+    </form>
+</div>
+</body>
+</html>
