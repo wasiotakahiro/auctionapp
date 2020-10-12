@@ -11,7 +11,10 @@ import org.springframework.stereotype.Repository;
 public class UsersRepository {
     private final UsersMapper mapper;
 
+    // ③データアクセス用メソッドの作成
     public void insert(Users request) {
+        // entityに変換し、mapper呼び出し
+        // entityはテーブルと対になるデータ型
         mapper.insert(new UsersEntity(
                 request.getId(),
                 request.getUserName(),

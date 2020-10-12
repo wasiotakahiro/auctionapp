@@ -29,12 +29,16 @@ public class auctionAppController {
         return new ModelAndView("sign_up");
     }
 
+    // ①コントローラーの作成
     @PostMapping("/sign_up")
     public ModelAndView signUp(@ModelAttribute @Validated SignUpRequest request, BindingResult error) {
+        // *************バリデーション**************
         if (error.hasErrors()) {
             return new ModelAndView("sign_up");
         }
+        // *******************************************
         log.info("アカウント登録リクエスト：{}", request);
+        // サービス呼び出し。実処理部分。
         usersService.signUp(SignUp.create(request));
         return new ModelAndView("product_list");
     }
