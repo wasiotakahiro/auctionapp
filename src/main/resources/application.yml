@@ -1,11 +1,15 @@
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/auctionapp
-    username: root
-    password: root
+    username: auctionapp
+    password: auctionapp
     driver-class-name: org.postgresql.Driver
   thymeleaf:
     mode: HTML
+
+server:
+  servlet:
+    context-path: /auctionapp
 
 mybatis:
   mapperLocations: classpath*:/mapper/*.xml
