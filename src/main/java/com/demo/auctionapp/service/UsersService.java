@@ -32,4 +32,11 @@ public class UsersService {
 
         usersRepository.insert(users);
     }
+
+    public void login() {
+        // ②ログイン機能を実装する
+        // ユーザ型を受けとる
+        // repositoryを呼び出す
+        // ユーザ型を返却する
+    }
 }

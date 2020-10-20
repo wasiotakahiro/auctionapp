@@ -28,4 +28,7 @@
             #{entity.price}
         )
     </insert>
+    <select id="selectByEmailAndPassword">
+<!--        ⑤SQLの発行-->
+    </select>
 </mapper>

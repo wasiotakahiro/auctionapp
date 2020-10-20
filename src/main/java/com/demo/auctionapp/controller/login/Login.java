@@ -21,6 +21,7 @@ public class Login
     @PostMapping("/login")
     String login(String l) //@ModelAttribute LoginRequest メソッドの引数に渡す
     {
+    // serviceを呼び出す
     //サインアップで登録した内容とポストされた内容が（id passwordをwhere句で条件にしてサインアップしたときのusersテーブルをselectできるかどうか）
     //selectできた場合は、一覧に遷移するできなかった場合は、ログイン画面に飛ばします。
         System.out.println(2);
