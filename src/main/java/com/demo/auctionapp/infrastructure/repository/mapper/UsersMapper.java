@@ -7,4 +7,6 @@ import org.apache.ibatis.annotations.Param;
 @Mapper
 public interface UsersMapper {
     void insert(@Param("entity")UsersEntity entity);
+    // ④ユーザ検索
+    UsersEntity selectByEmailAndPassword();
 }

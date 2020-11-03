@@ -27,4 +27,11 @@ public class UsersRepository {
                 request.getPrice()
         ));
     }
+
+    public void selectByEmailAndPassword() {
+        // ③ユーザをセレクトする
+        // mapperを呼び出す
+        // ユーザ型を返却する
+        // mapperからはentityをうけとる
+    }
 }
